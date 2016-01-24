@@ -9,10 +9,19 @@ import React, {
 } from 'react-native';
 
 import Navigation from './components/navigation';
+import Torrada from './torradeira';
 
 class VaiQueD extends Component {
   render() {
     return <Navigation />;
+  }
+
+  _chamaTorradeira() {
+    Torrada.queimada('Será Renan? Será?', Torrada.LONG);
+  }
+
+  componentDidMount() {
+    setTimeout(this._chamaTorradeira, 3000);
   }
 }
 
