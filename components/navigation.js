@@ -12,9 +12,9 @@ class Navigation extends Component {
     super(props);
 
     this.scenes = [
-      {0: <View style={{ width: 300, height: 300, backgroundColor: '#C02942'}}/>},
-      {0: <View style={{ width: 300, height: 300, backgroundColor: '#C02920'}}/>},
-      {0: <View style={{ width: 300, height: 300, backgroundColor: '#C08742'}}/>}
+      {0: <View style={[styles.scenes, {backgroundColor: '#C02942'}]}/>},
+      {0: <View style={[styles.scenes, {backgroundColor: '#C02920'}]}/>},
+      {0: <View style={[styles.scenes, {backgroundColor: '#C08742'}]}/>}
     ];
   }
 
@@ -48,6 +48,10 @@ const styles = StyleSheet.create({
   },
   navigator: {
     width: Dimensions.get('window').width
+  },
+  scenes: {
+    width: Dimensions.get('window').width,
+    height: Dimensions.get('window').height
   }
 });
 
