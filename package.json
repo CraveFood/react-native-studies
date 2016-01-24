@@ -6,10 +6,7 @@
     "start": "react-native start"
   },
   "dependencies": {
-    "react-native": "^0.18.1",
-    "react-native-gesture-recognizers": "^0.2.3"
+    "react-native": "^0.18.1"
   },
-  "devDependencies": {
-    "babel-plugin-transform-decorators": "^6.4.0"
-  }
+  "devDependencies": {}
 }

@@ -10,8 +10,7 @@ import React, {
   Text,
   View,
   Navigator,
-  Dimensions,
-  TouchableOpacity
+  Dimensions
 } from 'react-native';
 
 
@@ -36,38 +35,9 @@ class VaiQueD extends Component {
     return route[0];
   }
 
-  _onPress (navigator) {
-    //var curRoutes = navigator.getCurrentRoutes();
-    //var curRouteIndex = navigator.state.presentedIndex;
-
-    //var push = false;
-    //var next;
-
-    //if (curRoutes.length < this.scenes.length) {
-    //    next = curRouteIndex + 1;
-    //    push = true;
-    //} else {
-    //    next = (curRouteIndex + 1) % this.scenes.length;
-    //}
-
-    //if (push) {
-    //    navigator.push({index: curRoutes.length});
-    //} else {
-    //    navigator.jumpTo(curRoutes[next]);
-    //}
-  }
-
   render() {
     return (
       <View style={styles.container}>
-        <TouchableOpacity
-          onPress={(navigator) => this._onPress(this.refs.nav)}
-        >
-          <Text style={styles.welcome}>
-            Welcome to React Native!
-          </Text>
-        </TouchableOpacity>
-
         <Navigator ref='nav'
                    initialRouteStack={this.scenes}
                    renderScene={this._renderScene.bind(this)}
@@ -83,23 +53,14 @@ class VaiQueD extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-    marginTop: 30,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#FFF',
-    marginBottom: 5,
+    borderTopWidth: 20,
+    borderTopColor: '#D95b43'
   },
   navigator: {
-     width: Dimensions.get('window').width,
-     height: 600,
+     width: Dimensions.get('window').width
   }
 });
 
