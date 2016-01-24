@@ -12,7 +12,7 @@ class Navigation extends Component {
     super(props);
 
     this.scenes = [
-      {0: <View style={[styles.scenes, {backgroundColor: '#C02942'}]}/>},
+      {0: <View style={[styles.scenes, {backgroundColor: '#442942'}]}/>},
       {0: <View style={[styles.scenes, {backgroundColor: '#C02920'}]}/>},
       {0: <View style={[styles.scenes, {backgroundColor: '#C08742'}]}/>}
     ];
@@ -26,6 +26,7 @@ class Navigation extends Component {
     return (
       <View style={styles.container}>
         <Navigator ref='nav'
+                   initialRoute={this.scenes[1]}
                    initialRouteStack={this.scenes}
                    renderScene={this._renderScene.bind(this)}
                    configureScene={() => ({
